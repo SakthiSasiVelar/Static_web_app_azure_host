@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATM Project</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="outer-container">
+    <div class="atm-container">
+      <div class="title">WELCOME TO ATM</div>
+      <div id="card-container" class="input-label-container">
+        <div class="heading">Enter the card number</div>
+        <input type="number" class="card-num-input-box" id="card-number" />
+        <div id="card-number-error-container"></div>
+        <button type="button" class="submit-button" onclick="checkCardNumber()">
+          Enter
+        </button>
+      </div>
+      <div id="services-container" class="input-label-container">
+        <div class="heading">SERVICES</div>
+        <button class="service-btn" type="button" onclick="getOtp('balance')">
+          Check Balance
+        </button>
+        <button class="service-btn" type="button" onclick="getOtp('deposit')">Deposit</button>
+        <button class="service-btn" type="button" onclick="getOtp('withdraw')">Withdraw</button>
+      </div>
+      <div id="balance-container" class="input-label-container">
+        <div class="heading">CHECK BALANCE</div>
+        <div class="service-label-value">Available Balance :</div>
+        <div class="service-label-value" id="balance"></div>
+        <button type="button" class="back-button" onclick="backToServicePage()">
+          Back
+        </button>
+      </div>
+      <div id="deposit-container" class="input-label-container">
+        <div class="heading">DEPOSIT</div>
+        <div class="service-label-value">Enter Amount :</div>
+        <input type="number" class="deposit-input-box" id="deposit-value" />
+        <div id="deposit-error-container"></div>
+        <div class="submit-button" id="deposit-submit-btn">
+          Deposit
+        </div>
+        <button type="button" class="back-button" onclick="backToServicePage()">
+          Back
+        </button>
+      </div>
+      <div id="withdraw-container" class="input-label-container">
+        <div class="heading">WITHDRAW</div>
+        <div class="service-label-value">Enter Amount :</div>
+        <input type="number" class="deposit-input-box" id="withdraw-amount" />
+        <div id="withdraw-error-container"></div>
+        <button type="button" class="submit-button" onclick="validateWithdraw()">
+          Withdraw
+        </button>
+        <button type="button" class="back-button" onclick="backToServicePage()">
+          Back
+        </button>
+      </div>
+      <div id="otp-container" class="input-label-container">
+        <div class="heading">OTP</div>
+        <div class="service-label-value">Enter OTP :</div>
+        <input type="number" class="deposit-input-box" id="otp-value" />
+        <div id="otp-error-container"></div>
+        <button type="button" class="submit-button" onclick="verifyOtp()">Submit</button>
+      </div>
+      <div id="pin-container" class="input-label-container">
+        <div class="heading">PIN</div>
+        <div class="service-label-value">Enter PIN :</div>
+        <input type="number" class="deposit-input-box" id="pin-value"/>
+        <div id="pin-error-container"></div>
+        <button type="button" class="submit-button" onclick="checkPin()">Submit</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
